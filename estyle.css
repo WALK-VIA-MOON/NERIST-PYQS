@@ -68,7 +68,7 @@ nav h1 {
   width: 100%;
   margin-top: 90px;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(/Images/hero.jpg);
+    url(Images/hero.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -250,7 +250,7 @@ footer span {
   /* background: linear-gradient(rgba())url(/Images/background.png); */
   /* background-image: linear-gradient(rgba(4, 9, 30, 0.2), rgba(4, 9, 30, 0.2)),
     url(/Images/background.png); */
-  background-image: url(/Images/background.png);
+  background-image: url(Images/background.png);
   background-size: contain;
   background-position: center;
 }
@@ -515,3 +515,4 @@ footer span {
     width: 240px;
   }
 }
+
