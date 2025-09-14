@@ -1,0 +1,517 @@
+/* ------------------- Global Styles ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------------------- Navigation ------------------- */
+nav {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 6% 0 6%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  padding-bottom: 20px;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Libertinus Keyboard", system-ui;
+  color: #f44336;
+}
+
+.navlinks {
+  flex: 1;
+  text-align: right;
+  margin-right: 150px;
+}
+
+.navlinks ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.navlinks ul li a {
+  text-decoration: none;
+  font-family: "Libertinus Keyboard", system-ui;
+  font-weight: 300;
+  color: #f44336;
+  font-size: 20px;
+}
+
+.navlinks ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.navlinks ul li:hover::after {
+  width: 100%;
+}
+
+/* ------------------- Homepage ------------------- */
+#home {
+  height: 740px;
+  width: 100%;
+  margin-top: 90px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/Images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover {
+  border: 1px solid #f44336;
+  background-color: #f44336;
+  transition: 1s;
+}
+
+/* ------------------- Department Section ------------------- */
+#Search {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+/* Homepage department boxes */
+.dept-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.dept-col img {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.dept-col:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dept-col:hover img {
+  transform: scale(1.1);
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgba(29, 34, 39, 0.7);
+  cursor: pointer;
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+/* Footer */
+footer {
+  text-align: center;
+  border: 1px dotted rgb(68, 68, 68);
+  background: #f44336;
+}
+footer h4 {
+  color: #fff;
+  font-style: normal;
+}
+footer p {
+  color: #fff;
+}
+footer span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Back button for year grid */
+/* .fontwala {
+  font-size: 62px;
+  font-family: "Libertinus Keyboard", system-ui;
+} */
+#year-selection {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  height: auto;
+  /* margin-top: 100px; */
+}
+#year-grid {
+  /* width: 80%; */
+  align-items: center;
+}
+#year-grid .dept-col.layer.back-btn {
+  background-color: #555;
+  height: 60px;
+}
+
+#year-grid .dept-col.layer.back-btn h3 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ------------------- Department Page: Year Boxes ------------------- */
+.body {
+  /* background: linear-gradient(rgba())url(/Images/background.png); */
+  /* background-image: linear-gradient(rgba(4, 9, 30, 0.2), rgba(4, 9, 30, 0.2)),
+    url(/Images/background.png); */
+  background-image: url(/Images/background.png);
+  background-size: contain;
+  background-position: center;
+}
+.years {
+  /* flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: #f44336;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: none;  */
+  flex-basis: 31%;
+  margin-top: 10px;
+  background: #f44336;
+  border-radius: 100%;
+  margin-bottom: 5%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  cursor: pointer;
+  padding-bottom: 50px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.years:hover {
+  /* transform: none;
+  box-shadow: none; */
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+}
+#base1st {
+  flex-basis: 32%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+/* ------------------- Responsive ------------------- */
+@media (max-width: 700px) {
+  nav {
+    height: 20px;
+  }
+}
+
+/* --------------------
+   Department Pages: Year Selection
+-------------------- */
+#year-selection {
+  padding-top: 120px; /* pushes content below fixed nav */
+  text-align: center;
+  color: #000; /* heading and paragraph color */
+}
+
+#year-selection h1 {
+  font-size: 45px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+#year-selection p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* .year-box {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  background-color: #f44336;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+} */
+
+/* Remove hover scaling effect for year boxes */
+/* .year-box:hover {
+  transform: none;
+  box-shadow: none;
+} */
+
+/* Keep consistent row layout */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+/* Back button (if needed for future JS) */
+#year-grid .dept-col.layer.back-btn {
+  background-color: #555;
+  height: 60px;
+}
+#year-grid .dept-col.layer.back-btn h3 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  margin: 0;
+}
+
+#backBtn {
+  padding: 18px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0px;
+  border-radius: 20%;
+  background: black;
+  border: none;
+  color: #fff;
+}
+#backBtn:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+}
+
+#close {
+  display: none;
+}
+#menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    /* gap: 20px; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    align-items: center;
+    /* border: 1px solid black; */
+  }
+
+  nav h1 {
+    font-size: 24px;
+    margin-left: -25px;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: right;
+    z-index: 2;
+    margin-right: 0;
+    transition: 1s;
+  }
+  .navlinks ul {
+    margin-top: 20px;
+  }
+  .navlinks ul li {
+    display: block;
+
+    padding: 2px 6px;
+    margin: 0;
+    margin-right: 100px;
+    text-align: left;
+  }
+  .navlinks ul li a {
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+  #close {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #menu {
+    display: block;
+    color: #f44336;
+
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 0;
+    padding: 0;
+  }
+  #home {
+    height: 500px;
+    width: 100%;
+    margin-top: 62px;
+    background-size: cover;
+  }
+  .text-box {
+    margin-top: 40px;
+  }
+  .text-box h1 {
+    font-size: 32px;
+  }
+  .text-box p {
+    font-size: 13px;
+    margin: 10px 0 25px;
+  }
+  .btn {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+  #Search {
+    width: 98%;
+    padding-top: 85px;
+  }
+  .row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+  }
+  .dept-col {
+    flex-basis: 100%;
+    width: 95vw;
+    height: 220px;
+    margin-bottom: 22px;
+  }
+  .layer h3 {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 13px;
+    padding: 8px;
+  }
+  footer {
+    height: 100px;
+    margin-top: 65px;
+  }
+  footer p {
+    font-size: 12px;
+
+    padding: 0;
+    margin-top: 5px;
+  }
+  .years {
+    width: 240px;
+  }
+}
